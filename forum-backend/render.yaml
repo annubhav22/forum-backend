@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: forum-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGO_URL
+        value: <your-mongodb-uri>
+      - key: JWT_SECRET
+        value: forumsecret
+    plan: free
